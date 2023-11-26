@@ -17,7 +17,7 @@
 <!--        <module>springboot-study-starter</module>-->
 <!--        <module>tower-arthas-client</module>-->
 <!--        <module>tower-boot-rabbitmq</module>-->
-<!--        <module>tower-boot-redis</module>-->
+        <module>tower-boot-redis</module>
 <!--        <module>tower-boot-rockermq</module>-->
     </modules>
 
