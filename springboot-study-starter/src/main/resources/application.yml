@@ -1,0 +1,75 @@
+server:
+  port: 8100
+#  tomcat:
+#    uri-encoding: UTF-8
+#    max-http-header-size: 8192
+#    connection-timeout: 200000
+spring:
+  application:
+    name: study-starter
+  freemarker:
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html; charset=utf-8
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+    suffix: .html
+    template-loader-path:
+      - classpath:/templates/
+    settings:
+      number_format: 0.##
+
+#arthas:
+#  # telnetPort、httpPort为 -1 ，则不listen telnet端口，为 0 ，则随机telnet端口
+#  # 如果是防止一个机器上启动多个 arthas端口冲突。可以配置为随机端口，或者配置为 -1，并且通过tunnel server来使用arthas。
+#  # ~/logs/arthas/arthas.log (用户目录下面)里可以找到具体端口日志
+#  telnetPort: -1
+#  httpPort: -1
+#  # 127.0.0.1只能本地访问，0.0.0.0则可网络访问，但是存在安全问题
+#  ip: 127.0.0.1
+#  appName: arthas_test
+#  # 默认情况下，会生成随机ID，如果 arthas agent配置了 appName，则生成的agentId会带上appName的前缀。
+#  agent-id: hxl123456
+#  # tunnel-server地址
+#  tunnel-server: ws://127.0.0.1:7777/ws
+
+
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    database: 0
+#    password:
+#    timeout: 5000
+#    lettuce:
+#      pool:
+#        max-active: 8
+#        max-idle: 8
+#        max-wait: -1
+#        min-idle: 0
+#    redisKeyPrefix: tower
+
+#xxl:
+#  job:
+#    addresses: http://127.0.0.1:8090/xxl-job-admin
+##    userName: admin
+##    password: 123456
+#    accessToken:
+#    i18n: zh_CN
+#    logretentiondays: 30
+#    triggerpool.fast.max: 200
+#    triggerpool.slow.max: 100
+#    executor:
+#      appname: study
+tower:
+  arthas:
+    telnetPort: -1
+    httpPort: -1
+    tunnelServer: ws://127.0.0.1:7777/ws
+  rocket:
+    namesrvAddr: rmq-cn-uax3hvcin18.cn-shenzhen.rmq.aliyuncs.com:8080
+    accessKey: Wi8LUoNEXk0Pw96n
+    secretKey: lrU31j440yNaKGYU
+    packageName: com.hxl
+    versions: 4
