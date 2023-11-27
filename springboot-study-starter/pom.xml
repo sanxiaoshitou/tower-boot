@@ -67,11 +67,11 @@
 <!--        </dependency>-->
 
         <!--skd 集成-->
-        <dependency>
-            <groupId>com.hxl</groupId>
-            <artifactId>tower-arthas-client</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.hxl</groupId>-->
+<!--            <artifactId>tower-arthas-client</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
 
         <!--rocker mq 集成-->
         <dependency>

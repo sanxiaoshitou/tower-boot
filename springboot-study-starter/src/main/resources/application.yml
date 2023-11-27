@@ -63,13 +63,13 @@ spring:
 #    executor:
 #      appname: study
 tower:
-  arthas:
-    telnetPort: -1
-    httpPort: -1
-    tunnelServer: ws://127.0.0.1:7777/ws
+#  arthas:
+#    telnetPort: -1
+#    httpPort: -1
+#    tunnelServer: ws://127.0.0.1:7777/ws
   rocket:
-    namesrvAddr: rmq-cn-uax3hvcin18.cn-shenzhen.rmq.aliyuncs.com:8080
-    accessKey: Wi8LUoNEXk0Pw96n
-    secretKey: lrU31j440yNaKGYU
+    namesrvAddr: rmq-cn-x0r3hyoac18.cn-shenzhen.rmq.aliyuncs.com:8080
+    accessKey: mV55zi1UdKF2keT6
+    secretKey: pdbT0elgLi8J70Et
     packageName: com.hxl
     versions: 4
