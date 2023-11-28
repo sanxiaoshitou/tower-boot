@@ -108,8 +108,8 @@ tower:
 #    httpPort: -1
 #    tunnelServer: ws://127.0.0.1:7777/ws
   rocket:
-    namesrvAddr: rmq-cn-x0r3hyoac18.cn-shenzhen.rmq.aliyuncs.com:8080
-    accessKey: mV55zi1UdKF2keT6
-    secretKey: pdbT0elgLi8J70Et
+    namesrvAddr: url
+    accessKey:  accessKey
+    secretKey: secretKey
     packageName: com.hxl
     versions: 4

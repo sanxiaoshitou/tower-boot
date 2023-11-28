@@ -13,10 +13,20 @@ boot系列学塔
 
 ### springboot-study-starter 
 springBoot项目，用于集成测试
+基础能力:
+1、freemarker 模板引擎
+2、SwaggerConfig  SwaggerApi文档集成
+3、MyInterceptorConfig mvc过滤器 
+4、WebMvcFilter 解决跨越问题 
+5、ThreadPoolConfiguration 自定义线程池
 
 ### tower-arthas-client
 arthas skd集成包方式，根据appName+ip+port 动态生成agentId    
 说明详情: [ARTHAR.md](/tower-arthas-client/ARTHAR.md)
+
+### tower-boot-db
+mybatis集成  
+说明详情: [DB.md](/tower-boot-db/DB.md)
 
 ### tower-boot-redis
 对redis 基础能力集成  
