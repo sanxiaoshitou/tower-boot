@@ -1,7 +1,15 @@
-# tower-xxljob-module xxlJob组件
+# tower-boot-xxljob xxlJob组件
 
-## 模块说明
-xxlJob应用封装
+## xxljob 安装介绍
+
+下载地址:    
+github:[https://github.com/xuxueli/xxl-job/tree/2.3.0](https://github.com/xuxueli/xxl-job/tree/2.3.0)    
+gitee: [https://gitee.com/xuxueli0323/xxl-job/tree/2.3.0/](https://gitee.com/xuxueli0323/xxl-job/tree/2.3.0/)
+
+
+1、创建db, 目录: /doc/db/tables_xxl_job.sql    
+2、启动xxl-job-admin,登录界面 http://localhost:8080/xxl-job-admin 账号: admin 密码: 123456
+3、设置执行器，设置任务
 
 ## 使用说明
 
