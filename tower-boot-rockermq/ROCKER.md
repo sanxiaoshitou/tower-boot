@@ -18,8 +18,19 @@
 
 注：这个是一个持续集成优化过程，需要不停磨练
 
-### 三、根据RocketConsumer注解，动态监听器实现
-核心逻辑代码:
+### 三、yaml 配置示例
+```yaml
+tower:
+  rocket:
+    namesrvAddr: rocker实例地址
+    accessKey: accessKey
+    secretKey: accessKey
+    packageName: com.hxl
+    versions: 4
+```
+
+### 四、根据RocketConsumer注解，动态监听器实现
+1、核心逻辑代码:
 扫描包注解，根据配置版本号走不同的，消费组创建
 ```java
         String packageName = properties.getPackageName(); // 扫描包路径
@@ -41,6 +52,61 @@
             }
         }
 ```
+
+2、消费组push 用法示例
+版本4.* 写法
+```java
+@Slf4j
+@Component
+@RocketConsumer(topic = "PRODUCER_TOPIC", consumerGroup = "PRODUCER_GROUP")
+public class Push4MQConsumer implements MessageListener {
+
+    @Autowired
+    private UserService userService;
+
+    @Override
+    public Action consume(Message message, ConsumeContext consumeContext) {
+        String body = new String(message.getBody());
+        log.info("TestMQConsumer:" + body + "user:" + userService.getUserId());
+        return Action.CommitMessage;
+    }
+}
+```
+版本5.* 写法
+```java
+@Slf4j
+@Component
+@RocketConsumer(topic = "PRODUCER_TOPIC", consumerGroup = "PRODUCER_GROUP")
+public class TestMQConsumer implements MessageListener {
+
+    @Autowired
+    private UserService userService;
+
+    @Override
+    public ConsumeResult consume(MessageView messageView) {
+        String body = StandardCharsets.UTF_8.decode(messageView.getBody()).toString();
+        log.info("TestMQConsumer:" + body + "user:" + userService.getUserId());
+        return ConsumeResult.SUCCESS;
+    }
+}
+```
+### 五、RocketMessageProducer 生产发送
+目前只写5.* 写法,后面持续优化
+普通消息
+```java
+RocketMsg rocketMsg = new RocketMsg();
+rocketMsg.setBody("hxl测试发送");
+rocketMessageProducer.sendMessage("PRODUCER_TOPIC", null, rocketMsg);
+return ApiResult.success();
+```
+延迟消息
+```java
+RocketMsg rocketMsg = new RocketMsg();
+rocketMsg.setBody("延迟消息发送发送");
+rocketMessageProducer.sendMessage("DELAY_TOPIC", null, 5 * 60L, rocketMsg);
+```
+
+
 
 
 
