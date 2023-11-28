@@ -18,7 +18,7 @@ springBoot项目，用于集成测试
 arthas skd集成包方式，根据appName+ip+port 动态生成agentId    
 说明详情: [ARTHAR.md](/tower-arthas-client/ARTHAR.md)
 
-### ttower-boot-redis
+### tower-boot-redis
 对redis 基础能力集成  
 说明详情: [REDIS.md](/tower-boot-redis/REDIS.md)
 

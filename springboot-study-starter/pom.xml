@@ -79,6 +79,12 @@
             <artifactId>tower-boot-rockermq</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.hxl</groupId>
+            <artifactId>tower-boot-db</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>

@@ -7,6 +7,30 @@ server:
 spring:
   application:
     name: study-starter
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://${spring.datasource.ip}:${spring.datasource.port}/${spring.datasource.database}?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&autoReconnect=true
+    ip: 127.0.0.1
+    port: 3306
+    database: demo
+    username: hxl
+    password: 123456
+    # 连接池的配置信息
+    druid:
+      # 初始化大小，最小，最大
+      initial-size: 2
+      min-idle: 1
+      maxActive: 5
+      # 配置获取连接等待超时的时间
+      maxWait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 600000
+      # 配置一个连接在池中最大生存的时间，单位是毫秒
+      maxEvictableIdleTimeMillis: 900000
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500;druid.mysql.usePingMethod=false
   freemarker:
     cache: false
     charset: UTF-8
@@ -20,6 +44,20 @@ spring:
       - classpath:/templates/
     settings:
       number_format: 0.##
+
+mybatis-plus:
+  base-package: com.hxl.starter.mapper.**
+  mapper-locations: classpath:mapping/*.xml
+  configuration:
+    #开启自动驼峰命名规则（camel case）映射
+    map-underscore-to-camel-case: true
+    #延迟加载，需要和lazy-loading-enabled一起使用
+    aggressive-lazy-loading: true
+    lazy-loading-enabled: true
+    #关闭一级缓存
+    local-cache-scope: statement
+    #关闭二级级缓存
+    cache-enabled: false
 
 #arthas:
 #  # telnetPort、httpPort为 -1 ，则不listen telnet端口，为 0 ，则随机telnet端口
@@ -62,6 +100,8 @@ spring:
 #    triggerpool.slow.max: 100
 #    executor:
 #      appname: study
+
+
 tower:
 #  arthas:
 #    telnetPort: -1

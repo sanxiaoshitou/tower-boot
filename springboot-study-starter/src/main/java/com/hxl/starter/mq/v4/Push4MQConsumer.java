@@ -16,8 +16,8 @@ import org.springframework.stereotype.Component;
  * @Date 2023/11/26 2:19
  */
 @Slf4j
-@Component
-@RocketConsumer(topic = "PRODUCER_TOPIC", consumerGroup = "PRODUCER_GROUP")
+//@Component
+//@RocketConsumer(topic = "PRODUCER_TOPIC", consumerGroup = "PRODUCER_GROUP")
 public class Push4MQConsumer implements MessageListener {
 
     @Autowired

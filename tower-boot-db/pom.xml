@@ -38,31 +38,15 @@
             <version>${mysql-connector.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-            <version>${mybatis-spring.version}</version>
-        </dependency>
-        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
-            <version>${druid.version}</version>
+            <version>1.2.11</version>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatis-plus.version}</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.github.jsqlparser</groupId>-->
-<!--            <artifactId>jsqlparser</artifactId>-->
-<!--            <version>${jsqlparser.version}</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.baomidou</groupId>-->
-<!--            <artifactId>mybatis-plus</artifactId>-->
-<!--            <version>${mybatis-plus.version}</version>-->
-<!--        </dependency>-->
-
 
         <dependency>
             <groupId>org.springframework</groupId>

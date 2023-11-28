@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @Description
  * @Date 2023/11/28 11:13
  **/
+@Configuration
 public class MybatisConfiguration {
 
     @Bean
