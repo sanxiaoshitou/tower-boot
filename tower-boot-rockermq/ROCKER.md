@@ -54,7 +54,7 @@ tower:
 ```
 
 2、消费组push 用法示例
-版本4.* 写法
+版本4.x 写法
 ```java
 @Slf4j
 @Component
@@ -72,7 +72,7 @@ public class Push4MQConsumer implements MessageListener {
     }
 }
 ```
-版本5.* 写法
+版本5.x 写法
 ```java
 @Slf4j
 @Component
@@ -91,7 +91,7 @@ public class TestMQConsumer implements MessageListener {
 }
 ```
 ### 五、RocketMessageProducer 生产发送
-目前只写5.* 写法,后面持续优化
+目前只写5.x 写法,后面持续优化
 普通消息
 ```java
 RocketMsg rocketMsg = new RocketMsg();
